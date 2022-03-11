@@ -1,0 +1,140 @@
+/* *{
+	border: 1px lightcoral solid;
+} */
+
+.textBlod {
+	font-weight: bold;
+}
+.divCenter {
+	display: -webkit-flex;
+	display: 		 flex;
+	-webkit-align-items: center;
+			align-items: center;
+	-webkit-justify-content: center;
+			justify-content: center;
+}
+
+/* 商品頁CSS */
+.evenColor {
+	background-color: #F0F0F0;
+}
+.cartHeight {
+	height: calc(100vh - 113.58px);
+}
+.productMain {
+	width: 90vw;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+}
+.flex6 {
+	-webkit-flex: 3;
+			flex: 3;
+}
+.flex7 {
+	-webkit-flex: 7;
+			flex: 7;
+}
+.flex8 {
+	-webkit-flex: 2;
+			flex: 2;
+	display: -webkit-flex;
+	display: flex;
+	justify-content: center;
+}
+.flex8 > div {
+	margin: 0.5vh;
+}
+.flex9 {
+	-webkit-flex: 1.5;
+			flex: 1.5;
+}
+.flex10 {
+	-webkit-flex: 1.5;
+			flex: 1.5;
+}
+.productImg {
+	margin: 1vh;
+}
+.imgSize {
+	width: 18vh;
+	height: 18vh;
+}
+.product {
+	margin: 1vh;
+}
+.productName, .productInfor, .productPrice {
+	margin: 1vh;
+}
+.productPrice {
+	float: right;
+}
+.minusButton, .plusButton {
+	width: 3vw;
+}
+.minusButton > input, .plusButton > input {
+	width: 2vw;
+}
+.deleteButton {
+	text-decoration: none;
+	color: gray;
+}
+.deleteButton:hover {
+	color: #CD0B0B;
+}
+.button {
+	float: right;
+	position: relative;
+	right: 5vw;
+}
+.checkoutButton, .refuseButton{
+	margin: 0.5vh;
+	font-family: 'Kiwi Maru', serif;
+	font-weight: bolder;
+	font-size: 20px;
+	background-color: #555b6e;
+	color: #f9f9f9;
+}
+.checkoutButton:hover, .refuseButton:hover {
+	background-color: #BEE3DB;
+	color: #555B6E;		
+}
+
+/* 結帳頁CSS */
+.checkout {
+	display: flex;
+	height: calc(100vh - 193.58px);
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.checkout > img {
+	height: 180px;
+	width: 198px;
+	margin: 20px;
+}
+.checkout > div {
+	font-weight: bold;
+	color: #555B6E;
+}
+
+
+.card-body{
+	background-color:#f9f9f9 ;
+	opacity: 0.7;
+	box-shadow: 2px 2px 10px rgba(109, 108, 108, 0.705);
+}
+.card-title{
+	font-family: 'Kiwi Maru', serif;
+	font-size: 25px;
+	font-weight: bolder;
+	color: #555b6e;
+}
+#form-text{
+	font-family: 'Kiwi Maru', serif;
+	font-size: 20px;
+	font-weight: bolder;
+}
+.form-control:focus{
+	background-color: rgba(190, 227, 219,0.5);
+}

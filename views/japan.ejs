@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<%- include("import.ejs") %>	
+	<link rel="stylesheet" type="text/css" href="/css/index.css">
+</head>
+<body>
+	<%- include("header.ejs") %>
+	<main>
+		<div class="jp-picbox"><img src="/banner/japan02.jpg" alt="" class="jp-pic"></div>
+		<div class="itemArea" id="jp-body">
+			<div class="itemList">
+				<div class="container">
+					<div class="row col-md-3 flex-container">
+						<% for (let Japan of result) { %>
+							<div class="flex transformed itemAct">
+								<div class="divCenter" onclick="location.href='http://localhost:3000/product/<%= Japan.productID %>'">
+									<img src="<%= Japan.pictureSeat1 %>" alt="">
+								</div>
+								<div class="itemText" onclick="location.href='http://localhost:3000/product/<%= Japan.productID %>'">
+									<p><%= Japan.productName %></p>
+									<p>價格：<%= Japan.productPrice %>元</p>
+								</div>	
+							</div>
+						<% } %>
+					</div>	
+				</div>	
+			</div>
+	
+			<div aria-label="Page navigation example ">
+				<ul class="pagination divCenter">
+				<li class="page-item">
+					<a class="btn-n" href="#" aria-label="Previous">
+					<span aria-hidden="true">&laquo;</span>
+					</a>
+				</li>
+				<li class="page-item"><a class="page-link" id="page-link-n" href="http://localhost:3000/japan/page1">1</a></li>
+				<li class="page-item"><a class="page-link" id="page-link-n" href="http://localhost:3000/japan/page2">2</a></li>
+				<li class="page-item"><a class="page-link" id="page-link-n"href="http://localhost:3000/japan/page3">3</a></li>
+				<li class="page-item">
+					<a class="btn-n" href="#" aria-label="Next">
+					<span aria-hidden="true">&raquo;</span>
+					</a>
+				</li>
+				</ul>
+			</div>
+		</div>
+	</main>
+	<%- include("footer.ejs") %>
+</body>
+</html>

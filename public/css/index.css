@@ -1,0 +1,483 @@
+/* *{
+	border: 1px solid lightcoral;
+} */
+
+/* 通用class */
+a {
+	font-size: large;
+	text-decoration: none;
+	font-family: 'Kaisei Tokumin', serif;
+}
+
+body {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.flexcenter {
+	position: relative;
+	align-items: center;
+	justify-content: center;
+}
+
+.divCenter {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+
+/* header */
+.header {
+	height: 80px;
+	width: 100%;
+	background-color: #545b6e;
+	padding: 20px;
+}
+
+.floatL {
+	float: left;
+	margin-left: 50px;
+}
+
+.floatR {
+	float: right;
+	margin-right: 50px;
+}
+
+.icon-box {
+	padding: 10px;
+	margin: 5px;
+}
+
+.icon-pic {
+	width: 40px;
+	height: 40px;
+}
+
+.logo-pic {
+	width: 70px;
+	height: 70px;
+	margin-top: -15px;
+}
+
+.item-bar {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: -10px;
+}
+
+.item-bar ul {
+	z-index: 1;
+	/* 優先度 */
+	position: absolute;
+	list-style: none;
+	top: 100%;
+	min-width: 180px;
+	margin-top: -20px;
+	/* 隱藏次選單 */
+	display: none;
+	opacity: 0;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+
+/* 滑鼠滑入展開次選單 */
+.item-bar li:hover > ul {
+	display: block;
+	opacity: 1;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+
+.item-bar ul li {
+	background-color: #545b6e;
+	box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* .item-bar ul li:hover {
+	background-color: #89b0ae;
+} */
+
+.itemlist {
+	list-style: none;
+	display: flex;
+	padding: 20px;
+}
+
+.itemlist a {
+	color: #faf9f9;
+}
+
+.itemlist a:hover {
+	color: #89b0ae;
+}
+
+/* main */
+/* main {
+	height: calc(100vh - 160px);
+} */
+/* footer */
+.footer {
+	height: 80px;
+	width: 100%;
+	background-color: #545b6e;
+	padding: 20px;
+}
+
+.footerlist {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: -1vh;
+}
+
+.footeritem {
+	margin: 20px;
+	margin-top: -10px;
+}
+
+.footeritem a {
+	color: #faf9f9;
+}
+
+.footeritem a:hover {
+	color: #89b0ae;
+}
+
+/* banner */
+
+.Flex-container-banner {
+	margin: 0px auto;
+	width: 1000px;
+	height: 550px;
+
+}
+
+/* 商品輪播 */
+.container {
+	padding: 2px 16px;
+}
+
+.flex-container {
+	height: 50vh;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+
+.flex {
+	-webkit-flex: initial;
+	flex: initial;
+	 width: 25%;
+	min-width: 20%;
+	padding: 5px; 
+}
+
+.areaTitle {
+	text-align: center;
+	font-weight: bold;
+}
+
+
+
+.betaSlider-nav-btn {
+	background-image: url(/icon/left-arrow.png);
+	background-position: center center;
+	background-size: contain;
+	border: none;
+}
+
+.betaSlider-nav-btn {
+	background-image: url(/icon/right-arrow.png);
+	background-position: center center;
+	background-size: contain;
+	border: none;
+}
+
+.indexline {
+	width: 100%;
+	margin: 29px 0;
+	height: 2px;
+	background: #F3F3F3;
+}
+
+.picture {
+	width: 100%;
+	height: 100%;
+}
+
+.picture>img {
+	width: 15vw;
+	height: 15vw;
+}
+
+.flo {
+	float: left;
+}
+
+/* 商品列表 */
+
+.itemList{
+	display:flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	
+}
+
+
+/* =====公告區====== */
+
+.news-box{
+	padding-top: 30px;
+	padding-bottom: 10px;
+	width: 800px;
+	margin: 0px auto;
+	
+}
+
+.news-inner{
+	text-align: center;
+	height: 80px;
+	width: 100%;
+	max-height: 30px;
+	overflow: hidden;
+	margin-top: -45px;
+}
+
+
+.news-pic{
+	height: 80px;
+	width: 120px;
+	
+}
+.news-pic img{
+	height: 80px;
+	width: 140px;
+	float: left;
+	
+}
+
+
+.news-text1{
+position: relative;
+font-size: 20px;
+animation: change 3s ;
+-webkit-animation: change 3s ;
+animation-direction: alternate;
+-webkit-animation-direction: alternate;
+animation-iteration-count: infinite;
+-webkit-animation-iteration-count: infinite;
+
+}
+
+
+@keyframes change{
+	from{top: 0px;}
+	to{top: 50px;}
+}
+@-webkit-keyframes change{
+	from{top: 0px;}
+	to{top: 50px;
+
+	}
+}
+
+.news-text2{
+	position: relative;
+	font-size: 20px;
+	animation: change2 3s ;
+	-webkit-animation: change2 3s ;
+	animation-direction: alternate;
+	-webkit-animation-direction: alternate;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+
+	
+
+}
+@keyframes change2 {
+	from{bottom: 0px;}
+	to{bottom: 40px;
+	}
+	
+}
+@-webkit-keyframes change2{
+from{bottom: 0px;}
+to{bottom: 40px;}
+
+}
+
+
+  /* =======banner輪播======== */
+
+.banner-pic{
+	width: 1000px;
+	height: 550px;
+}
+
+.col-md-3 {
+	width :auto;
+	height: auto;
+	
+}
+
+.col-md-3 img{
+	width:200px;
+	height: 200px;
+	background-color: #ccc;
+	transition: 0.5s;
+
+}
+
+.itemAct:hover{
+	transform:scale(1.1);
+	transition: ease-in-out transform .5s;
+	
+	
+
+
+}
+.itemAct{
+	width: 200px;
+	height: 300px;
+	margin: 15px;
+	box-shadow: 2px 2px 10px   rgba(110, 108, 110, 0.767);
+	border-radius: 3px;
+}
+
+/* =======漢堡選單====== */
+
+/* 會員漢堡選單 */
+
+
+.floatR > .burger-areas{
+	float: left;
+}
+
+.member-meau{
+	list-style: none;
+	padding-left: 0;
+	margin-top: 2vh;
+	clear: both;
+	/* 隱藏表單 */
+	max-height: 0;
+	overflow: hidden;
+	transition: .5s;
+	
+}
+
+  /* ˇ打開 */
+input:checked ~ .member-meau{
+	max-height:250px;
+}
+
+.member-meau li{
+	text-align: center;
+	
+}
+
+.member-meau li a {
+display: block ;
+padding: 1vh 2vh;
+color: #545b6e;
+
+}
+
+.member-meau li a:hover{
+	background-color: #545b6e;
+	color: #89b0ae;
+	border-radius: 5px;
+}
+
+.member-text{
+	text-decoration: none;
+}
+
+  /* 隱藏check box */
+
+#switch{
+	display: none;
+}
+
+#burger-icon{
+	margin-left:4vh ;
+	margin-top: -2vh;
+}
+
+
+/* ====許願清單圖==== */
+
+.wish-box img{
+	width: 60%;
+	float: right;
+	margin-top: -450px;
+
+	
+}
+
+.areaTitle{
+	width: 80%;
+	margin: 0px auto;
+	margin-bottom: 30px;
+	margin-top: 10px;
+	
+}
+
+.areaTitle span{
+	font-size: 3vh;
+	color: #545b6e;
+	font-family: 'Kiwi Maru', serif;
+	border-bottom: 10px solid #89b0ae;
+}
+
+/* =====日韓區版頭===== */
+.jp-pic{
+	width: 70%;
+	height: 600px;
+	display: block;
+	margin: auto;
+	
+}
+.kr-pic{
+	width: 70%;
+	height: 600px;
+	display: block;
+	margin: auto;
+	
+}
+
+
+.page-link{
+	font-family: 'Kiwi Maru', serif;
+	color: #545b6e;
+	font-weight: bold;
+	
+
+}
+#page-link-n{
+	border-radius: 999em;
+	border: 3px solid #545b6e;
+	margin: 1vh;
+}
+#page-link-n:hover{
+	border: 3px solid #89b0ae;
+	background-color: #bee3db;
+	color:#545b6e ;
+
+}
+
+.btn-n{
+	font-family: 'Kiwi Maru', serif;
+	color: #545b6e;
+}

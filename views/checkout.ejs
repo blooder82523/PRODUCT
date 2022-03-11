@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<%- include("import.ejs") %>	
+	<link rel="stylesheet" type="text/css" href="/css/index.css">
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+<body>
+	<%- include("header.ejs") %>
+	<main class="cart">
+		<div class="checkout">
+			<img src="/icon/goat.png">
+			<div>
+				商品已結帳
+			</div>
+		</div>
+		<script>
+        setTimeout(function () { location.href = "/" }, 2000); </script>
+	</main>
+	<%- include("footer.ejs") %>
+	
+</body>
+</html>

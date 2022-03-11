@@ -1,0 +1,164 @@
+<!-- 許願表單 demo 2022 03 01 09:47 -->
+<html lang="en">
+<head>
+    <%- include("import.ejs") %>    
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <!-- =====animate===== -->
+    <!-- Animate.css v3.5.2 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet"  />
+
+    <style>
+        a, a:hover, a:focus {
+        text-decoration: none;
+        }
+        #form-text{
+        font-family: 'Kiwi Maru', serif;
+        font-size: 20px;
+        font-weight: bolder;
+        }
+        .form-control:focus{
+        background-color: rgba(190, 227, 219,0.5);
+        }
+        .btn{
+        background-color: #555b6e;
+        color: #f9f9f9;
+        font-size: 20px;
+        font-family: 'Kiwi Maru', serif;
+        font-weight: bolder;
+
+        }
+        .btn:hover{
+        background-color: #bee3db;
+        color: #555b6e;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <!-- ========== header ========= -->
+    <header>
+        <div class="container-fluid hidden-sm hidden-md hidden-xs"></div>
+        <div class="header flexcenter">
+        <div class="floatL">
+            <a href="http://localhost:3000">
+            <a href="/">
+            <img src="/icon/logo-white.png" class="logo-pic">
+            </a>
+        </div>
+        <div class="floatR">
+        
+            <a href="http://localhost:3000/cart" class="icon-box">
+            <img src="/icon/cart.png" class="icon-pic">
+            </a>
+    
+            <div class="burger-areas">  
+            <label for="switch"  class="icon-box"><img src="/icon/bullet-list.png" class="icon-pic" id="burger-icon"></label>
+            <input type="checkbox" id="switch">
+            <ul class="member-meau">
+                <li class="member-list"><a href="/updateuser" class="member-text">變更密碼</a></li>
+                <li class="member-list"><a href="/myform" class="member-text">客服表單</a></li>
+                <li class="member-list"><a href="/customer_feedback" class="member-text">客服紀錄</a></li> 
+                <li class="member-list"><a href="/wishList" class="member-text">許願清單</a></li>
+                <li class="member-list"><a href="/logout" class="member-text">登出</a></li>
+            </ul>
+            </div>
+        </div>
+        <div>
+            <ul class="item-bar">
+            <li class="itemlist">
+                <a href="http://localhost:3000/japan/page1">日本專區</a>
+            </li>
+            <li class="itemlist">
+                <a href="http://localhost:3000/korea/page1">韓國專區</a>
+            </li>
+            <li class="itemlist">
+                <a href="/todowishingPond">許願池</a>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </header>
+    
+    <!-- ========== header ========= -->
+
+    <div class="container col-sm-12" id="mainform">
+        <div id="signupbox" style=" margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                                     
+            <div class="panel panel-info"  >
+                <div class="panel-heading">
+                </div> 
+                <div class="panel-body">
+                    <form  class="form-horizontal" role="form" method="post" action="/" enctype="multipart/form-data">
+                        <% if (message.length > 0) { %>
+                            <div class="alert alert-success col-sm-12"><%= message %></div>
+                        <% } %>
+                        <div id="signupalert" style="display:none" class="alert alert-danger">
+                            <p>Error:</p>
+                            <span></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="col-md-3 control-label" id="form-text">信箱</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" name="email" placeholder="您的信箱">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="name" class="col-md-3 control-label" id="form-text">會員名稱</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" name="name" placeholder="您的名稱">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="uploaded_image" class="col-md-3 control-label" id="form-text">商品圖案</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" type="file" name="uploaded_image" accept=""/>
+                            </div>
+                        </div>                                
+                        <div class="form-group">
+                            <label for="commodity_name" class="col-md-3 control-label" id="form-text">商品名稱</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" name="commodity_name" placeholder="請務必填寫">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="Product_Description" class="col-md-3 control-label" id="form-text">商品說明</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" name="Product_Description" placeholder="請務必填寫">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <!-- Button -->                                       
+                            <div class="col-md-offset-3 col-md-9">
+                                <button id="btn-signup" type="submit" class="btn btn-info"><i class="icon-hand-right"></i>送出</button>
+                            </div>
+                        </div>  
+                    </form>
+
+                    
+                </div>
+            </div>
+        </div>
+        <div class="wish-box">
+			<img src="/banner/make a wish.png" alt="" >
+        </div>
+    </div>
+
+    <footer class="fixed-bottom">
+        <div class="container-fluid hidden-sm hidden-md hidden-xs"></div>
+        <div class="footer flexcenter">
+            <div>
+                <ul class="footerlist">
+                    <li class="footeritem">
+                        <a href="">關於我們</a>
+                    </li>
+                    <li class="footeritem">
+                        <a href="">聯絡我們</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
